@@ -27,14 +27,12 @@ h1 {
   line-height: 70px;
   text-align: center;
   border-radius: 12px;
-  font-weight: bold;
-  font-size: 14px;
+  font-size: 0; /* hides the text */
+  color: transparent; /* ensures no text color is visible */
   background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
   background-size: cover;
   box-shadow: 4px 4px 10px rgba(0,0,0,0.4), inset 2px 2px 5px rgba(255,255,255,0.3);
   border: 2px solid #9e7540;
-  color: #fff;
-  text-shadow: 1px 1px 2px #000;
   cursor: grab;
   transition: transform 0.2s;
 }
