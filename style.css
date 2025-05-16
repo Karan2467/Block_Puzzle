@@ -1,0 +1,148 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f3ea;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #5a3825;
+}
+
+.controls, .actions, .operator-toggle {
+  margin: 15px;
+}
+
+.sequence-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  min-height: 80px;
+}
+
+.block {
+  width: 70px;
+  height: 70px;
+  margin: 0 10px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-size: cover;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.4), inset 2px 2px 5px rgba(255,255,255,0.3);
+  border: 2px solid #9e7540;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.block:active {
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.instructions-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #9e7540;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #fffaf0;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.block.picked {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.8), 4px 4px 10px rgba(0,0,0,0.4);
+  opacity: 0.9;
+}
+
+.instructions-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #9e7540;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #fffaf0;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}

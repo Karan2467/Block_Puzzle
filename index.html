@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wood Block Alignment Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="instructionsBtn" class="instructions-btn">Instructions</button>
+
+  <!-- Modal -->
+  <div id="instructionsModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Instructions</h2>
+      <ol>
+        <li>A random sequence of colored blocks is arranged <strong>below the table</strong>. This is the hidden target sequence.</li>
+        <li>The same colored blocks are shuffled and placed <strong>on the table</strong>, visible to you.</li>
+        <li>Use drag-and-drop (or touch and hold on mobile) to rearrange the blocks above the table.</li>
+        <li>Click <strong>"Get Alignment"</strong> to see how many blocks are aligned in the correct position and color.</li>
+        <li>The goal is to match the entire sequence above to exactly match the hidden sequence below.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="game-container">
+    <h1>Block Alignment Game</h1>
+    <div class="controls">
+      <label for="blockCount">Choose difficulty:</label>
+      <select id="blockCount">
+        <option value="3">Easy (3 blocks)</option>
+        <option value="4">Medium (4 blocks)</option>
+        <option value="5" selected>Hard (5 blocks)</option>
+        <option value="6">Very Hard (6 blocks)</option>
+      </select>
+      <button id="startBtn">Start Game</button>
+    </div>
+    <div class="operator-toggle">
+      <button id="revealBtn">Reveal Sequence</button>
+    </div>
+    <div class="sequences">
+      <div id="userSequence" class="sequence-container"></div>
+      <div id="operatorSequence" class="sequence-container hidden"></div>
+    </div>
+    <div class="actions">
+      <button id="checkBtn">Check Alignment</button>
+      <p id="matchResult"></p>
+      <p id="attempts"></p>
+    </div>
+    <div id="congratsMessage" class="hidden">
+      <h2>🎉 Congratulations! You solved it!</h2>
+      <button id="replayBtn">Play Again</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
